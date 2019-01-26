@@ -17,8 +17,8 @@ function *generator() {
 	function createOption(name){
 		var option = document.createElement('option');
 
-        option.text = temp.name;
-        return option;
+        	option.text = temp.name;
+		return option;
 	}
 
 	for (var i = 0; i < Ids.length; i++) {
@@ -48,21 +48,21 @@ function populateData(Data1, Data2){
 	document.getElementById('Name2').innerHTML = Data2.name;
 
 	function compareShips(quality) {
-	var firstShip = document.getElementById(quality + "1");
-        var secondShip = document.getElementById(quality + "2");
+		var firstShip = document.getElementById(quality + "1");
+        	var secondShip = document.getElementById(quality + "2");
 
-       	firstShip.innerHTML = Data1[quality];
-        secondShip.innerHTML = Data2[quality];
+       		firstShip.innerHTML = Data1[quality];
+        	secondShip.innerHTML = Data2[quality];
             
-            var first = parseInt(Data1[quality]);
-            var second = parseInt(Data2[quality]);
+       		var first = parseInt(Data1[quality]);
+            	var second = parseInt(Data2[quality]);
             
-            if (first > second) {
-                firstShip.setAttribute("style", "background-color: red;");
-            }
-            else if (second > first) {
-                secondShip.setAttribute("style", "background-color: red;");
-            }
+            	if (first > second) {
+                	firstShip.setAttribute("style", "background-color: red;");
+           	 }
+           	 else if (second > first) {
+                	secondShip.setAttribute("style", "background-color: red;");
+           	 }
 	}
 
 	var qualities = [ "cost_in_credits", "max_atmosphering_speed", "cargo_capacity", "passengers" ];
