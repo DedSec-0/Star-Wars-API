@@ -48,7 +48,7 @@ function populateData(Data1, Data2){
 	document.getElementById('Name2').innerHTML = Data2.name;
 
 	function compareShips(quality) {
-		var firstShip = document.getElementById(quality + "1");
+	var firstShip = document.getElementById(quality + "1");
         var secondShip = document.getElementById(quality + "2");
 
        	firstShip.innerHTML = Data1[quality];
@@ -67,10 +67,9 @@ function populateData(Data1, Data2){
 
 	var qualities = [ "cost_in_credits", "max_atmosphering_speed", "cargo_capacity", "passengers" ];
 
-    for (var quality of qualities) {
-    	compareShips(quality);
-    }
-
+	for (var quality of qualities) {
+    		compareShips(quality);
+    	}
 }
 
 function run(genFunc) {
